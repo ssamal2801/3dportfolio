@@ -40,9 +40,9 @@ const Computers = ({ isMobile }) => {
     const handleScroll = () => {
         const scrollValue =
             window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const rotationValue = scrollValue * Math.PI * 2;
+        const rotationValue = (scrollValue * Math.PI) / 7;
         if (compRef.current) {
-            compRef.current.rotation.y = rotationValue * 3;
+            compRef.current.rotation.y = rotationValue;
         }
     };
 
