@@ -1,5 +1,5 @@
-import { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Suspense, useEffect, useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber'; // Import useFrame hook
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../loaders/HashLoader';
 import PropTypes from 'prop-types';
@@ -35,8 +35,27 @@ const Computers = ({ isMobile }) => {
 
     const computer = useGLTF('./desktop_pc/scene.gltf');
 
+    const compRef = useRef();
+
+    const handleScroll = () => {
+        const scrollValue =
+            window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        const rotationValue = scrollValue * Math.PI * 2;
+        if (compRef.current) {
+            compRef.current.rotation.y = rotationValue * 3;
+        }
+    };
+
+    // Use useEffect hook to listen for scroll events and update rotation
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <mesh>
+        <mesh ref={compRef}>
             {overheadLight && <primitive object={overheadLight} />}
             {masterLight && (
                 <primitive

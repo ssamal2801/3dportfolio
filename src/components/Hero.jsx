@@ -38,17 +38,24 @@ const Hero = () => {
 
             <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
                 <a href="#about">
-                    <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-                        <motion.div
+                    <div className="w-[150px] h-[64px] square-3xl border-4 border-secondary flex justify-center items-start p-2">
+                        Scroll up
+                        <motion.i
                             animate={{
                                 y: [0, 24, 0],
                             }}
                             transition={{
-                                duration: 1.5,
+                                duration: 3,
                                 repeat: Infinity,
                                 repeatType: 'loop',
                             }}
-                            className="w-3 h-3 rounded-full bg-secondary mb-1"
+                            className="w-3 h-3 mb-1"
+                            style={{
+                                borderTop: 'solid 8px transparent',
+                                borderRight: 'solid 8px transparent',
+                                borderBottom: 'solid 8px #ffff',
+                                borderLeft: 'solid 8px transparent',
+                            }}
                         />
                     </div>
                 </a>
