@@ -15,9 +15,10 @@ const Hero = () => {
                 </div>
 
                 <div>
-                    <h1 className={`${styles.heroHeadText} text-white`}>
-                        Hi, I'm <span className="text-[#915EFF]">Swagat</span>
-                    </h1>
+                    <h3 className={`${styles.heroHeadText} text-white`}>
+                        Hi, I'm <span className="text-[#915EFF]">Swagat. </span>
+                        Welcome to my galaxy!
+                    </h3>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                         I develop Modern Full Stack WebAps with{' '}
                         <span className="text-[#915EFF]"> 3D</span> designs like
@@ -25,17 +26,15 @@ const Hero = () => {
                         <span className="text-[#915EFF]"> Apple</span> or
                         <span className="text-[#915EFF]"> Nike's</span> website.
                         <br className="sm:block hidden" />I also specialize in
-                        Desktop, Backend development and a little bit of IOT app
+                        Backend development, and, Desktop and IOT app
                         development.
                         <br className="sm:block hidden" />
-                        <br className="sm:block hidden" /> In short I love using
+                        <br className="sm:block hidden" /> I love using
                         technology 👨‍💻 to solve real world problems! 🐱‍🏍
                     </p>
                 </div>
             </div>
-
             <ComputersCanvas />
-
             <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
                 <a href="#about">
                     <div className="w-[150px] h-[64px] square-3xl border-4 border-secondary flex justify-center items-start p-2">

@@ -19,10 +19,11 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    mqttlistener,
+    gsender,
+    whim,
     threejs,
+    xd,
 } from '../assets';
 
 export const navLinks = [
@@ -62,27 +63,27 @@ const services = [
 const technologies = [
     {
         title: 'React.js',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
+        icon: reactjs,
     },
     {
-        title: 'Redux',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
-    },
-    {
-        title: 'Electron.js',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg',
+        title: 'Three.js',
+        icon: threejs,
     },
     {
         title: 'Vue.js',
         icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
     },
     {
-        title: 'Vuetify',
-        icon: 'https://bestofjs.org/logos/vuetify.svg',
+        title: 'Electron.js',
+        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg',
     },
     {
-        title: 'Angular',
-        icon: 'https://angular.io/assets/images/logos/angular/angular.svg',
+        title: 'Redux',
+        icon: redux,
+    },
+    {
+        title: 'Vuetify',
+        icon: 'https://bestofjs.org/logos/vuetify.svg',
     },
     {
         title: 'GraphQL',
@@ -90,23 +91,23 @@ const technologies = [
     },
     {
         title: 'Node.js',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg',
+        icon: nodejs,
     },
     {
         title: 'Express.js',
         icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg',
     },
     {
-        title: '.Net',
+        title: '.Net Core',
         icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg',
     },
     {
         title: 'CSS3',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg',
+        icon: css,
     },
     {
         title: 'Html5',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg',
+        icon: html,
     },
     {
         title: 'Sass',
@@ -114,7 +115,7 @@ const technologies = [
     },
     {
         title: 'Tailwind CSS',
-        icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg',
+        icon: tailwind,
     },
     {
         title: 'Less',
@@ -126,11 +127,11 @@ const technologies = [
     },
     {
         title: 'Javascript',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
+        icon: javascript,
     },
     {
         title: 'Typescript',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
+        icon: typescript,
     },
     {
         title: 'C#',
@@ -146,11 +147,11 @@ const technologies = [
     },
     {
         title: 'Figma',
-        icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',
+        icon: figma,
     },
     {
         title: 'Adobe XD',
-        icon: 'https://cdn.worldvectorlogo.com/logos/adobe-xd.svg',
+        icon: xd,
     },
     {
         title: 'Cypress',
@@ -166,7 +167,7 @@ const technologies = [
     },
     {
         title: 'MongoDB',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg',
+        icon: mongodb,
     },
     {
         title: 'Microsoft SQL Server',
@@ -182,11 +183,7 @@ const technologies = [
     },
     {
         title: 'GitHub',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original-wordmark.svg',
-    },
-    {
-        title: 'Git',
-        icon: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
+        icon: git,
     },
     {
         title: 'Jira',
@@ -213,10 +210,6 @@ const technologies = [
         icon: 'https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg',
     },
     {
-        title: 'Blender',
-        icon: 'https://download.blender.org/branding/community/blender_community_badge_white.svg',
-    },
-    {
         title: 'Chart.js',
         icon: 'https://www.chartjs.org/media/logo-title.svg',
     },
@@ -226,7 +219,7 @@ const technologies = [
     },
     {
         title: 'Docker',
-        icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
+        icon: docker,
     },
     {
         title: 'Apache Kafka',
@@ -338,67 +331,79 @@ const testimonials = [
 
 const projects = [
     {
-        name: 'Car Rent',
+        name: 'Whim',
         description:
-            'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+            'An app to bring like-minded people together and help them share or get help on their hobbies.',
         tags: [
             {
-                name: 'react',
+                name: 'React.js',
                 color: 'blue-text-gradient',
             },
             {
-                name: 'mongodb',
+                name: 'Node.js',
                 color: 'green-text-gradient',
             },
             {
-                name: 'tailwind',
+                name: 'MongoDB',
                 color: 'pink-text-gradient',
             },
+            {
+                name: 'MaterialUI',
+                color: 'green-text-gradient',
+            },
         ],
-        image: carrent,
-        source_code_link: 'https://github.com/',
+        image: whim,
+        source_code_link: 'https://github.com/ssamal2801/whim-frontend',
     },
     {
-        name: 'Job IT',
+        name: 'gSender',
         description:
-            'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+            'A React.js + Electron.js desktop app to visualize 3D files and transfer them into any surface using a CNC machine.',
         tags: [
             {
-                name: 'react',
+                name: 'React.js',
                 color: 'blue-text-gradient',
             },
             {
-                name: 'restapi',
+                name: 'Electron.js',
                 color: 'green-text-gradient',
             },
             {
-                name: 'scss',
+                name: 'Three.js',
                 color: 'pink-text-gradient',
             },
+            {
+                name: 'WebGL',
+                color: 'green-text-gradient',
+            },
         ],
-        image: jobit,
-        source_code_link: 'https://github.com/',
+        image: gsender,
+        source_code_link: 'https://github.com/Sienci-Labs/gsender',
     },
     {
-        name: 'Trip Guide',
+        name: 'Mosquitto Listener',
         description:
-            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+            'A library that listens to events from IOT sensors for temperature, ambient, ppt, sound, light, etc data and feeds it to a SQL database.',
         tags: [
             {
-                name: 'nextjs',
+                name: 'C#',
                 color: 'blue-text-gradient',
             },
             {
-                name: 'supabase',
+                name: 'Microsoft SQL',
                 color: 'green-text-gradient',
             },
             {
-                name: 'css',
+                name: 'MQTT Protocol',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'IOT',
                 color: 'pink-text-gradient',
             },
         ],
-        image: tripguide,
-        source_code_link: 'https://github.com/',
+        image: mqttlistener,
+        source_code_link: 'https://github.com/ssamal2801/MQTTListener',
     },
 ];
 
