@@ -22,10 +22,9 @@ import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 import xd from './tech/xd.png';
 
-import meta from './company/meta.png';
-import shopify from './company/shopify.png';
-import starbucks from './company/starbucks.png';
-import tesla from './company/tesla.png';
+import tfLogo from './company/TF.png';
+import sienciLogo from './company/sienci.png';
+import conectogaLogo from './company/conestoga.png';
 
 import mqttlistener from './mqttlistener.png';
 import gsender from './gsender.png';
@@ -53,10 +52,9 @@ export {
     tailwind,
     typescript,
     threejs,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
+    tfLogo,
+    sienciLogo,
+    conectogaLogo,
     xd,
     mqttlistener,
     gsender,
