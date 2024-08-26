@@ -33,7 +33,7 @@ const Ufo = ({ isMobile }) => {
         };
     }, []);
 
-    const ufoModel = useGLTF('./UFO/Rigged_Modular.glb');
+    const ufoModel = useGLTF('./3dFiles/astronaut.glb');
 
     const compRef = useRef();
 
@@ -56,16 +56,13 @@ const Ufo = ({ isMobile }) => {
 
     return (
         <mesh ref={compRef}>
-            {overheadLight && (
-                <primitive object={overheadLight} intensity={6} castShadow />
-            )}
             {ascentLight && (
                 <primitive
                     object={ascentLight}
-                    position={[-20, 50, 20]}
-                    angle={0.12}
-                    penumbra={1}
-                    intensity={100}
+                    position={[4, 0, 0]}
+                    angle={0.5}
+                    penumbra={100}
+                    intensity={50}
                     castShadow
                     shadow-mapSize={1024}
                 />
@@ -73,16 +70,16 @@ const Ufo = ({ isMobile }) => {
             {frontLight && (
                 <primitive
                     object={frontLight}
-                    intensity={20}
-                    position={[1, 1, 1]}
+                    intensity={50}
+                    // position={[1, 1, 1]}
                 />
             )}
             {ufoMesh && (
                 <primitive
                     object={ufoModel.scene}
-                    scale={isMobile ? 0.7 : 0.8}
-                    position={isMobile ? [0, 0, 0] : [0, -0.5, 0]}
-                    rotation={[-Math.PI / 2, 0, 0]}
+                    scale={isMobile ? 0.01 : 0.05}
+                    position={isMobile ? [3, 0, 0] : [3, 0, 0]}
+                    rotation={[-Math.PI / 2, 1.5, 1]}
                 />
             )}
         </mesh>
@@ -123,6 +120,7 @@ const ComputerCanvas = () => {
             shadows
             camera={{ position: [20, 3, 5], fov: 25 }}
             gl={{ preserveDrawingBuffer: true }}
+            style={{ height: '100vh' }}
         >
             <Suspense fallback={<CanvasLoader />}>
                 <OrbitControls
